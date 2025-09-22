@@ -15,11 +15,13 @@ public class T1Panel extends JPanel {
         init();
     }
     private void init(){
-        button1 = new JButton("1");
-        button2 = new JButton("2");
+        button1 = new JButton("show");
+        button2 = new JButton("hide");
+        button3 = new JButton("close");
         this.setLayout(new FlowLayout(2,30,0));
         this.add(button1);
         this.add(button2);
+        this.add(button3);
     }
     @Override
     protected void paintComponent(Graphics g) {

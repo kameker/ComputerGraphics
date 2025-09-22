@@ -22,10 +22,16 @@ public class T1Frame extends JFrame {
                 t1Canvas.setVisible(true);
             }
         } );
-        t1Panel.button2.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                t1Canvas.setVisible(false);
-            }
-        } );
+        t1Panel.button2.addActionListener(e -> {
+            // Code to be executed when the button is clicked
+            t1Canvas.setVisible(false);
+        });
+        t1Panel.button3.addActionListener(new CustomButtonListener());
+    }
+}
+class CustomButtonListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+        // Code to be executed when the button is clicked
+        System.exit(0);
     }
 }
